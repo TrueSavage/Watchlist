@@ -15,7 +15,7 @@ class App extends Component {
 
   handleSearchMovie = event => {
     event.preventDefault()
-    axios.get(`http://www.omdbapi.com/?t=${this.state.title}&apikey=trilogy`)
+    axios.get(`https://www.omdbapi.com/?t=${this.state.title}&apikey=trilogy`)
       .then(({ data: movie }) => {
         console.log(movie)
         this.setState({ movie, title: '' })
